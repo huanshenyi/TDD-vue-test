@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Headerコンポーネント style変化時にお知らせ 1`] = `
-<div class="header">
-  <div class="header-content">
-    TodoList
-    <input data-test="input" placeholder="TodoItem" class="header-input"></div>
-</div>
-`;

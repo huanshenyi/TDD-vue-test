@@ -21,7 +21,7 @@ module.exports = {
     'jest-serializer-vue'
   ],
   testMatch: [
-    '**/__tests__/unit/*.test.(js|jsx|ts|tsx)'
+    '**/__tests__/integration/*.test.(js|jsx|ts|tsx)'
   ],
   testPathIgnorePatterns: [
     '/.eslintrc/.js'

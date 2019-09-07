@@ -4,7 +4,7 @@
         TodoList
         <input
           class="header-input"
-          data-test="input"
+          data-test="header-input"
           v-model="inputValue"
           @keyup.enter="addTodoItem"
           placeholder="TodoItem"
