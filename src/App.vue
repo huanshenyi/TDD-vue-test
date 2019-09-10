@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    <todo-list/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import TodoList from './containers/TodoList/TodoList'
 
 export default {
-  name: 'app',
-  components: {
-    TodoList
-  }
+  name: 'app'
 }
 </script>
 <style lang="stylus">

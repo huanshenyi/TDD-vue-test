@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import { findTestWrapper } from '../../../../utils/testUtils'
 import TodoList from '../../TodoList'
 import store from '../../../../store'
-import axios from '../../__mocks__/axios'
+import axios from '../__mocks__/axios'
 
 // 元のコードのタイマーを入れ替える
 // 実行するたびにfaketimerをリセット、しなければ、testの間に実行数が累計される
