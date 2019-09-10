@@ -12,8 +12,10 @@
 </template>
 
 <script>
+import axios from 'axios'
 import Header from './components/Header'
 import UndoList from './components/UndoList'
+
 export default {
   name: 'TodoList',
   components: {
@@ -24,6 +26,15 @@ export default {
     return {
       undoList: []
     }
+  },
+  mounted () {
+    setTimeout(() => {
+      axios.get('/getUndoList.json').then((res) => {
+        this.undoList = res.data
+      }).catch(e => {
+        console.log(e)
+      })
+    }, 4000)
   },
   methods: {
     addUndoItem (inputValue) {

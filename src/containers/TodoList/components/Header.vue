@@ -4,8 +4,9 @@
         TodoList
         <input
           class="header-input"
-          data-test="input"
-          v-model="inputValue"
+          data-test="header-input"
+          :value="inputValue"
+          @input="e => changeInputValue(e.target.value)"
           @keyup.enter="addTodoItem"
           placeholder="TodoItem"
         />
@@ -14,20 +15,24 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'Header',
-  data () {
-    return {
-      inputValue: ''
-    }
+  computed: {
+    ...mapState({
+      inputValue: state => state.inputValue
+    })
   },
   methods: {
     addTodoItem () {
       if (this.inputValue) {
         this.$emit('add', this.inputValue)
-        this.inputValue = ''
+        this.changeInputValue('')
       }
-    }
+    },
+    ...mapMutations({
+      changeInputValue: 'changeInputValue'
+    })
   }
 }
 </script>

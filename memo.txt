@@ -9,3 +9,5 @@ npm run lint --fix
 
 #スナップショット
 w -> u,スナップショットを更新
+
+memo
